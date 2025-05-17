@@ -1,5 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-html {
-  font-family: Arial, Helvetica;
+:root {
+  /* Text Sizes */
+  --text-size-small: 14px;
+  --text-size-medium: 16px;
+  --text-size-large: 22px;
+  --text-size-x-large: 28px;
+
+  /* Colors */
+  --color-primary: #493f3a;
+  --color-secondary: #a59084;
+  --color-tertiary: #423b3b;
+  --color-white: #fff;
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /* Border Radius */
+  --border-radius-x-small: 2px;
+  --border-radius-small: 4px;
+  --border-radius-medium: 6px;
+  --border-radius-large: 8px;
+  --border-radius-circle: 50%;
 }
 
+html {
+  font-family: "Barlow";
+  font-size: var(--text-size-medium);
+  font-weight: var(--font-weight-regular);
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}

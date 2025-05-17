@@ -1,21 +1,41 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-
-// https://vitepress.dev/reference/runtime-api#usedata
-const { site, frontmatter } = useData()
+import Header from "./components/header";
+import HeroSection from "./components/hero-section";
+import Motto from "./components/Motto.vue";
 </script>
 
 <template>
-  <div v-if="frontmatter.home">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <ul>
-      <li><a href="/markdown-examples.html">Markdown Examples</a></li>
-      <li><a href="/api-examples.html">API Examples</a></li>
-    </ul>
-  </div>
-  <div v-else>
-    <a href="/">Home</a>
-    <Content />
+  <div>
+    <transition name="fade-slide-up" appear>
+      <Header />
+    </transition>
+
+    <transition name="fade-slide-up" appear>
+      <HeroSection />
+    </transition>
+
+    <transition name="fade-slide-up" appear>
+      <Motto />
+    </transition>
   </div>
 </template>
+
+<style scoped>
+.fade-slide-up-enter-active {
+  transition: all 0.6s ease-out;
+}
+
+.fade-slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Add delay for each component */
+.fade-slide-up-enter-active:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.fade-slide-up-enter-active:nth-child(3) {
+  transition-delay: 0.4s;
+}
+</style>
