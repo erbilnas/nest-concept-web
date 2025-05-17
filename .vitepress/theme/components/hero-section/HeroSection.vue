@@ -4,9 +4,9 @@ import HeroSectionNavigation from "./HeroSectionNavigation.vue";
 import HeroSectionSlides from "./HeroSectionSlides.vue";
 
 const images = [
-  ".vitepress/theme/assets/banner/banner-01.png",
-  ".vitepress/theme/assets/banner/banner-02.jpeg",
-  ".vitepress/theme/assets/banner/banner-03.jpeg",
+  "/banner/banner-01.png",
+  "/banner/banner-02.jpeg",
+  "/banner/banner-03.jpeg",
 ];
 
 const current = ref(0);
