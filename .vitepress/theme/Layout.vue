@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import ContactUs from "./components/ContactUs.vue";
+import Footer from "./components/Footer.vue";
 import Header from "./components/header";
 import HeroSection from "./components/hero-section";
 import Motto from "./components/Motto.vue";
+import Services from "./components/Services.vue";
 </script>
 
 <template>
@@ -16,6 +19,18 @@ import Motto from "./components/Motto.vue";
 
     <transition name="fade-slide-up" appear>
       <Motto />
+    </transition>
+
+    <transition name="fade-slide-up" appear>
+      <Services />
+    </transition>
+
+    <transition name="fade-slide-up" appear>
+      <ContactUs />
+    </transition>
+
+    <transition name="fade-slide-up" appear>
+      <Footer />
     </transition>
   </div>
 </template>
