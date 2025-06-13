@@ -4,6 +4,7 @@ import Footer from "./components/Footer.vue";
 import Header from "./components/header";
 import HeroSection from "./components/hero-section";
 import Motto from "./components/Motto.vue";
+import ScrollToTop from "./components/ScrollToTop.vue";
 import Services from "./components/Services.vue";
 </script>
 
@@ -32,6 +33,8 @@ import Services from "./components/Services.vue";
     <transition name="fade-slide-up" appear>
       <Footer />
     </transition>
+
+    <ScrollToTop />
   </div>
 </template>
 

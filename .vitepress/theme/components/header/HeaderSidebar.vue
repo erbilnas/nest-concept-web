@@ -53,7 +53,7 @@ const closeSidebar = () => {
       </button>
       <nav>
         <a href="#services" class="link" @click="closeSidebar">HİZMETLERİMİZ</a>
-        <a href="#projects" class="link" @click="closeSidebar">PROJELERİMİZ</a>
+        <!-- <a href="#projects" class="link" @click="closeSidebar">PROJELERİMİZ</a> -->
         <a href="#contact" class="link" @click="closeSidebar">İLETİŞİM</a>
       </nav>
     </div>

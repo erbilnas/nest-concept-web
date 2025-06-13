@@ -2,7 +2,12 @@
 
 <template>
   <div>
-    <a href="#" class="icons" aria-label="Instagram">
+    <a
+      href="https://www.instagram.com/conceptsnest/"
+      class="icons"
+      aria-label="Instagram"
+      target="_blank"
+    >
       <svg
         :width="24"
         :height="24"

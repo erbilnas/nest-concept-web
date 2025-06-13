@@ -50,7 +50,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="services">
+  <div class="services" id="services">
     <h1 class="title">HİZMETLERİMİZ</h1>
     <div class="service-cards">
       <div

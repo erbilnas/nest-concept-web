@@ -2,7 +2,11 @@
 
 <template>
   <footer class="footer">
-    <div class="footer-copyright">COPYRIGHT © NEST CONCEPT</div>
+    <div class="footer-copyright">
+      NEST CONCEPT © Bu sitenin geliştirmesi
+      <a href="https://erbilnas.com" target="_blank">Erbil Nas</a> tarafından
+      yapılmaktadır.
+    </div>
   </footer>
 </template>
 
@@ -25,7 +29,42 @@
   text-align: center;
   font-size: var(--text-size-large);
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   font-weight: var(--font-weight-regular);
+  padding: 0 16px;
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-primary-light);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 24px 0 16px 0;
+    height: auto;
+    min-height: 10vh;
+  }
+
+  .footer-copyright {
+    font-size: var(--text-size-medium);
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 16px 0 12px 0;
+  }
+
+  .footer-copyright {
+    font-size: var(--text-size-small);
+    padding: 0 8px;
+  }
 }
 </style>

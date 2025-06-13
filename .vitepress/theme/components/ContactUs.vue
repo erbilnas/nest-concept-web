@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="contact-section">
+  <section class="contact-section" id="contact">
     <div class="contact-container">
       <div class="contact-info">
         <h2>İletişim bilgilerimiz</h2>
@@ -28,9 +28,16 @@
                 </g>
               </svg>
             </span>
-            Arabacıalanı Mah. Mehmet Akif Ersoy Cad.<br />
-            Aydın İş Merkezi No:44 K:1 D:22<br />
-            Serdivan / SAKARYA
+            <a
+              href="https://maps.app.goo.gl/nDRKRsZvhubnA5DH8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="address-link"
+            >
+              Arabacıalanı Mah. Mehmet Akif Ersoy Cad.<br />
+              Aydın İş Merkezi No:44 K:1 D:22<br />
+              Serdivan / SAKARYA
+            </a>
           </li>
           <li>
             <span class="icon"
@@ -50,7 +57,9 @@
                 />
               </svg>
             </span>
-            info@conceptnest.com.tr
+            <a href="mailto:info@conceptnest.com.tr" class="email-link"
+              >info@conceptnest.com.tr</a
+            >
           </li>
           <li>
             <span class="icon"
@@ -70,7 +79,7 @@
                 />
               </svg>
             </span>
-            +90 530 590 6100
+            <a href="tel:+905305906100" class="phone-link">+90 530 590 6100</a>
           </li>
         </ul>
       </div>
@@ -86,6 +95,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 2rem 0;
 }
 .contact-section::before {
   content: "";
@@ -110,6 +120,7 @@
   gap: 2rem;
   color: var(--color-secondary);
   font-size: var(--text-size-large);
+  width: 100%;
 }
 
 .contact-info h2 {
@@ -123,6 +134,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .contact-info li {
@@ -132,6 +144,7 @@
   margin-bottom: 24px;
   font-size: var(--text-size-large);
   font-weight: var(--font-weight-light);
+  line-height: 1.5;
 }
 
 .icon {
@@ -139,6 +152,37 @@
   align-items: center;
   justify-content: center;
   min-width: 30px;
+  flex-shrink: 0;
+}
+
+.phone-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--color-primary);
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--color-primary);
+}
+
+.address-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.address-link:hover {
+  color: var(--color-primary);
 }
 
 @media (max-width: 900px) {
@@ -146,7 +190,47 @@
     flex-direction: column;
     gap: 32px;
     width: 95vw;
-    padding: 32px 8px;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 1rem 0;
+  }
+
+  .contact-container {
+    padding: 24px 16px;
+  }
+
+  .contact-info h2 {
+    font-size: var(--text-size-x-large);
+    margin-bottom: 24px;
+  }
+
+  .contact-info li {
+    font-size: var(--text-size-large);
+    gap: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    min-width: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-info h2 {
+    font-size: var(--text-size-large);
+  }
+
+  .contact-info li {
+    font-size: var(--text-size-medium);
+    gap: 0.75rem;
+  }
+
+  .icon {
+    min-width: 20px;
   }
 }
 </style>

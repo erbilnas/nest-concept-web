@@ -80,4 +80,14 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .motto {
+    .image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
 </style>
