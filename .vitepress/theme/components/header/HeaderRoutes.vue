@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const scrollToServices = () => {
-  const servicesSection = document.getElementById("services");
-  if (servicesSection) {
+const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
     const offset = 80; // Adjust this value based on your header height
-    const elementPosition = servicesSection.getBoundingClientRect().top;
+    const elementPosition = section.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - offset;
 
     window.scrollTo({
@@ -13,19 +13,18 @@ const scrollToServices = () => {
   }
 };
 
-const scrollToContact = () => {
-  const contactSection = document.getElementById("contact");
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: "smooth" });
-  }
-};
+const scrollToServices = () => scrollToSection("services");
+const scrollToMissionVision = () => scrollToSection("mission-vision");
+const scrollToPrinciples = () => scrollToSection("principles");
+const scrollToContact = () => scrollToSection("contact");
 </script>
 
 <template>
   <div>
     <nav>
       <a class="link" @click="scrollToServices">HİZMETLERİMİZ</a>
-      <!-- <a href="#projects" class="link">PROJELERİMİZ</a> -->
+      <a class="link" @click="scrollToMissionVision">MİSYON & VİZYONUMUZ</a>
+      <a class="link" @click="scrollToPrinciples">MİMARİ İLKELERİMİZ</a>
       <a class="link" @click="scrollToContact">İLETİŞİM</a>
     </nav>
   </div>

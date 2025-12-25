@@ -5,7 +5,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build && bun run .vitepress/scripts/generate-sitemap.ts",
     "docs:preview": "vitepress preview"
   }
 }

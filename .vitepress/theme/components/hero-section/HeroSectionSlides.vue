@@ -11,9 +11,10 @@ defineProps<{
       v-for="(img, idx) in images"
       :key="img"
       :src="img"
-      :alt="`Slide ${idx + 1}`"
+      :alt="`Nest Concept - Hero banner image ${idx + 1} showcasing our modern business solutions`"
       class="image"
       :class="{ active: idx === current }"
+      loading="lazy"
     />
   </div>
 </template>
